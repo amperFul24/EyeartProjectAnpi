@@ -1,0 +1,47 @@
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Imagen de fondo */
+  .imagen-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .imagen-fondo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Texto */
+  .texto {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: #000000;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 25px;
+  }
+  
+  .texto h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .texto p {
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  

@@ -1,0 +1,300 @@
+<body>
+<div class="alert-opacity " id="alertcar">
+    <div class = "carrito">
+        <div class="encabezado">
+        <div class="titulo-carrito">
+            Carrito de Compras
+        </div>
+        <div class="cerrar">
+            <i class="fa-solid fa-x" alt="cardout()"></i>
+        </div>
+        </div>
+        <div class="cero" id="cero">
+            No tienes Productos en el Carrito
+        </div>
+        <div class="subtotal">
+            <div class="total">
+                Total : $XX.XXX
+            </div>
+        </div>
+        <div class="boton-comprar">
+            <a href="TipoPago.php">
+                <button class="btn-pedido" id="btn-pedido">
+                    Confirmar Peido
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class = "catalogo">
+<div class = "filtro">
+    <div class = "filtrar">
+        <h2>FILTRAR POR</h2>
+    </div>
+    <div class = "Departamento">
+        <h4>Departamento<br>
+        <div class="checkon">
+            <input type="checkbox" class = "check" id="Cuerpo"  value="Cuerpo"  alt="filtrarCuerpo()" />
+            <label for="Cuerpo">Cuerpo</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="Facial"  value="Facial" alt="filtrarFacial()"/>
+            <label for="Facial">Facial</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="Velas"  value="Velas" alt="filtrarVelas()"/>
+            <label for="Velas">Velas</label><br>
+        </div>
+        </h4>
+    </div>
+    <div class = "Categoria">
+        <h4>Categoria<br>
+        <div class="checkon">
+            <input type="checkbox" class = "check" id="Jabones"  value="Jabones" alt="filtrarJabones()" />
+            <label for="Jabones">Jabones</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="Antibacteriales"  value="Antibacteriales" alt="filtrarAntibacteriales()" />
+            <label for="Antibacteriales">Antibacteriales</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="Cremas"  value="Cremas" alt="filtrarCremas()"/>
+            <label for="Cremas">Cremas Corporales</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="Velas"  value="Velas" alt="filtrarVelas()" />
+            <label for="Velas">Velas</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="Belleza"  value="Belleza"  alt="filtrarBelleza()"/>
+            <label for="Belleza">Belleza</label><br>
+        </div>
+        </h4>
+    </div>
+    <div class = "Sub-Categoria">
+        <h4>Sub-Categoria<br>
+        <div class="checkon">
+            <input type="checkbox" class = "check" id="glicerina"  value="glicerina" />
+            <label for="glicerina">Jabones de glicerina</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="Bombas"  value="Bombas" />
+            <label for="Bombas">Bombas Efervescentes</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="JabonesFaciales"  value="JabonesFaciales" />
+            <label for="JabonesFaciales">Jabones Faciales</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="JabonesCorporales"  value="JabonesCorporales" />
+            <label for="JabonesCorporales">Jabones Corporales</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="CremasFaciales"  value="CremasFaciales" />
+            <label for="CremasFaciales">Cremas Faciales</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="CremasCorporales"  value="CremasCorporales" />
+            <label for="CremasCorporales">Cremas Corporales</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="VelasAromaticas"  value="VelasAromaticas" />
+            <label for="VelasAromaticas">Velas Aromaticas</label><br>
+        </div>
+        <div class="checkon">
+            <input type="checkbox" id="Velasglicerina"  value="Velasglicerina" />
+            <label for="Velasglicerina">Velas de glicerina</label><br>
+        </div>
+        </h4>
+    </div>
+
+
+
+</div>
+   <div class = "cards">
+    @for(product of producto; track $index){
+        <div class = "card" id="card1">
+            <img src="{{product.url_foto}}" alt="">
+            <div class = "info">
+                <h5>{{product.Nombre}}</h5>
+                <h2>{{product.DescripcionProducto}} </h2>
+                <h3>{{product.Precio | currency}}</h3>
+                <a  routerLink="/productI/{{product.idProducto}}">
+                <button class = "btn1" (click)="seleccionar(product.idProducto)">
+                    Comprar
+                </button>
+                </a>
+                <button class = "btn2" alt="openpro1()">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+    }
+        <div class = "card" id="card2">
+            <img src="https://media.istockphoto.com/id/1147544807/es/vector/no-imagen-en-miniatura-gr%C3%A1fico-vectorial.jpg?s=612x612&w=0&k=20&c=Bb7KlSXJXh3oSDlyFjIaCiB9llfXsgS7mHFZs6qUgVk=" alt="">
+            <div class = "info">
+                <h5>Velas</h5>
+                <h2>Velas de Manzanilla  </h2>
+                <h3>$8.500</h3>
+                <a href="Productos/Producto1.php">
+                    <button class = "btn1">
+                        Comprar
+                    </button>
+                    </a>
+                <button class = "btn2" alt="openpro2()">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+        <div class = "card" id="card3">
+            <img src="https://media.istockphoto.com/id/1147544807/es/vector/no-imagen-en-miniatura-gr%C3%A1fico-vectorial.jpg?s=612x612&w=0&k=20&c=Bb7KlSXJXh3oSDlyFjIaCiB9llfXsgS7mHFZs6qUgVk=" alt="">
+            <div class = "info">
+                <h5>Jabones</h5>
+                <h2>Jabon Glicerina Canendula </h2>
+                <h3>$67.000</h3>
+                <a href="Productos/Producto2.php">
+                    <button class = "btn1">
+                        Comprar
+                    </button>
+                    </a>
+                <button class = "btn2" alt="openpro3()">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+         <div class = "card" id="card4">
+            <img src="https://media.istockphoto.com/id/1147544807/es/vector/no-imagen-en-miniatura-gr%C3%A1fico-vectorial.jpg?s=612x612&w=0&k=20&c=Bb7KlSXJXh3oSDlyFjIaCiB9llfXsgS7mHFZs6qUgVk=" alt="" >
+            <div class = "info">
+                <h5>Cremas</h5>
+                <h2>Crema Facial </h2>
+                <h3>$16.500</h3>
+                <a href="Productos/Producto3.php">
+                    <button class = "btn1">
+                        Comprar
+                    </button>
+                    </a>
+                <button class = "btn2" alt="openpro4()">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+        <div class = "card" id="card5">
+            <img src="https://media.istockphoto.com/id/1147544807/es/vector/no-imagen-en-miniatura-gr%C3%A1fico-vectorial.jpg?s=612x612&w=0&k=20&c=Bb7KlSXJXh3oSDlyFjIaCiB9llfXsgS7mHFZs6qUgVk=" alt="">
+            <div class = "info">
+                <h5>Antibacterial</h5>
+                <h2>Gel Antibacterial E_E Art </h2>
+                <h3>$19.000</h3>
+                <a href="Productos/Producto4.php">
+                    <button class = "btn1">
+                        Comprar
+                    </button>
+                    </a>
+                <button class = "btn2" alt="openpro5()">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+        <div class = "card" id="card6">
+            <img src="https://media.istockphoto.com/id/1147544807/es/vector/no-imagen-en-miniatura-gr%C3%A1fico-vectorial.jpg?s=612x612&w=0&k=20&c=Bb7KlSXJXh3oSDlyFjIaCiB9llfXsgS7mHFZs6qUgVk=" alt="">
+            <div class = "info">
+                <h5>Jabones</h5>
+                <h2>Jabon Corporal E_E Art  </h2>
+                <h3>$7.500</h3>
+                <a href="Productos/Producto5.php">
+                    <button class = "btn1">
+                        Comprar
+                    </button>
+                    </a>
+                <button class = "btn2" alt="openpro6()">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+        <div class = "card" id="card7">
+            <img src="https://media.istockphoto.com/id/1147544807/es/vector/no-imagen-en-miniatura-gr%C3%A1fico-vectorial.jpg?s=612x612&w=0&k=20&c=Bb7KlSXJXh3oSDlyFjIaCiB9llfXsgS7mHFZs6qUgVk=" alt="">
+            <div class = "info">
+                <h5>Jabones</h5>
+                <h2>Jabon Glicerina </h2>
+                <h3>$47.000</h3>
+                <a href="Productos/Producto6.php">
+                    <button class = "btn1">
+                        Comprar
+                    </button>
+                    </a>
+                <button class = "btn2" alt="openpro7()">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+        <div class = "card" id="card8">
+            <img src="https://media.istockphoto.com/id/1147544807/es/vector/no-imagen-en-miniatura-gr%C3%A1fico-vectorial.jpg?s=612x612&w=0&k=20&c=Bb7KlSXJXh3oSDlyFjIaCiB9llfXsgS7mHFZs6qUgVk=" alt="">
+            <div class = "info">
+                <h5>Jabones</h5>
+                <h2>Jabon Corporal Maracuya  </h2>
+                <h3>$9.500</h3>
+                <a href="Productos/Producto7.php">
+                    <button class = "btn1">
+                        Comprar
+                    </button>
+                    </a>
+                <button class = "btn2" alt="openpro8()">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+        <div class = "card" id="card9">
+            <img src="https://media.istockphoto.com/id/1147544807/es/vector/no-imagen-en-miniatura-gr%C3%A1fico-vectorial.jpg?s=612x612&w=0&k=20&c=Bb7KlSXJXh3oSDlyFjIaCiB9llfXsgS7mHFZs6qUgVk=" alt="">
+            <div class = "info">
+                <h5>Jabones</h5>
+                <h2>Jabon Glicerina Cereza</h2>
+                <h3>$57.000</h3>
+                <a href="Productos/Producto8.php">
+                    <button class = "btn1">
+                        Comprar
+                    </button>
+                    </a>
+                <button class = "btn2" alt="openpro9()">
+                    Agregar al carrito
+                </button>
+            </div>
+            <img src="https://media.istockphoto.com/id/1147544807/es/vector/no-imagen-en-miniatura-gr%C3%A1fico-vectorial.jpg?s=612x612&w=0&k=20&c=Bb7KlSXJXh3oSDlyFjIaCiB9llfXsgS7mHFZs6qUgVk=" alt="">
+            <div class = "info">
+                <h5>Cremas</h5>
+                <h2>Mascara De Carbon </h2>
+                <h3>$38.000</h3>
+                <a href="Productos/Producto9.php">
+                    <button class = "btn1">
+                        Comprar
+                    </button>
+                    </a>
+                <button class = "btn2" alt="openpro10()">
+                    Agregar al carrito
+                </button>
+            </div>
+        </div>
+        <div class = "cardmas" id = "cardmas2">
+            <img src="https://media.istockphoto.com/id/1147544807/es/vector/no-imagen-en-miniatura-gr%C3%A1fico-vectorial.jpg?s=612x612&w=0&k=20&c=Bb7KlSXJXh3oSDlyFjIaCiB9llfXsgS7mHFZs6qUgVk=" alt="">
+            <div class = "info">
+                <h5>Jabones</h5>
+                <h2>Jabon Glicerina Mora</h2>
+                <h3>$57.000</h3>
+                <a href="Productos/Producto10.php">
+                    <button class = "btn1">
+                        Comprar
+                    </button>
+                    </a>
+                <button class = "btn2" alt="openpro11()">
+                    Agregar al carrito
+                </button>
+            </div>
+</div>
+<div class="no-productos"id="alertpro">
+    !No se encontraron Productos que coincidan con su seleccion.
+</div>
+</div>
+</div>
+<app-footer>
+
+</app-footer>

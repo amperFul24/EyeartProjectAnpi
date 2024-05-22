@@ -1,0 +1,37 @@
+<div class="container-form">
+    <div class="formulario">
+        <div class="container-inputs">
+            <h3>EDITAR USUARIO CARRITO</h3>
+            <p>
+                Usuario: <br>
+                <select [(ngModel)]="car.Usuario_idUsuario" class="form-select" aria-label="Default select example">
+                    <option value="1">Ivan Eduardo Olmos Ramirez</option>
+                    <option value="2">Sergio David Olmos Ramirez</option>
+                    <option value="3">Marcy Yaneth Ramirez Lancheros</option>
+                    <option value="4">Eduardo Alfonso Patiño Olmos</option>
+                    <option value="5">Diego Patiño Rodriguez</option>
+                    <option value="6">Eduardo Antonio Balza Peña</option>
+                    <option value="7">Daniel Felipe Romero Moreno</option>
+                    <option value="8">Brayam Sneider Cerquera Rodriguez</option>
+                    <option value="9">Yeimi Rodriguez Suarez</option>
+                    <option value="10">Andres Leonardo Ramirez Pinilla</option>
+                    <option value="11">Luisa Fernanda Sandoval Suarez</option>
+                    <option value="12">Lorena Medina Yazo</option>
+                    <option value="13">Luis Fernando Morales</option>
+                    <option value="14">Shirley vanessa Garcia</option>
+                    <option value="15">Juliana Andrea Lopez Ramirez</option>
+                    <option value="16">Maria del Carmen Osorio</option>
+                    <option value="17">Mark aniton Petterson offord</option>
+                    <option value="18">Maria Camila Soto Arias</option>
+                    <option value="19">Timmy Sandoval Valenzuela</option>
+                    <option value="20">Jann Paul Romero Fernandez</option>
+                    <option value="21">jorge lopez</option>
+                  </select>
+            </p>
+            <div class="botones">
+            <p><button type="button" class="btn btn-success"(click)="modificacion(car.idCarrito)">Editar</button></p>
+            <p><button type="button" class="btn btn-danger" routerLink="/carrito">Cancelar</button></p>
+            </div>    
+        </div>
+    </div>
+</div>
