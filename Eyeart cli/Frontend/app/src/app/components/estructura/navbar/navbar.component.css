@@ -1,0 +1,119 @@
+nav {
+    top: 0;
+    left: 0;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    z-index: 99;
+    }
+nav .logo a{
+    font-size: 30px;
+    color: #07570eb0;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0 50px;
+}
+
+.logo img{
+    height: 80px;
+}
+
+.iconos{
+    width: 150px;
+    margin: 0 0 0 50px;
+}
+.iconos .inicio{
+    margin: 44px 6px;
+    width: 50px;
+    display: inline-flex;
+    height: 50px;
+    background: #e7e7e7;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.inicio a{
+    height: 100%;
+}
+
+.iconos .inicio:hover{
+
+    background: #07570eb0;
+    transition: 0.5s;
+    color: #fcfcfc;
+    
+}
+
+.inicio :hover i {
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+
+.fa-solid{
+    color:#000000;
+    font-size: 25px;
+    margin: 12px 14px;
+    width: 60px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.fa-door-open{
+    color:#000000;
+    font-size: 25px;
+    margin: 12px 12px;
+    width: 60px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.menu{
+    
+    list-style: none;
+    display: flex;
+    padding: 0;
+    align-items: center;
+    margin: auto;
+}
+.menu li a{
+    text-decoration: none;
+    color: #07570eb0;
+    padding: 20px;
+    display: block;
+    transition: all .3s;
+    
+}
+.menu li{
+    display: inline-block;
+    text-align: center;
+    padding: 6px 14px;
+}
+ 
+.menu li a:hover{
+    color: rgb(189, 189, 4);
+    transition: all .3s;
+}
+
+.submenu{
+    position: absolute;
+    max-width: fit-content;
+    display: none;
+    transition: 0.5s;
+}
+.submenu li{
+    background: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+
+
+}
+.submenu li a{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.menu li:hover .submenu{
+    display: block;
+    transition: 1.5s;
+}

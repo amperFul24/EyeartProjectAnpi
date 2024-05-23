@@ -1,0 +1,47 @@
+.container-form{
+    width: 100%;
+    margin: 60px 0;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container-inputs{
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding: 30px 160px;
+    border: 1px solid #bfbfbf;
+    border-radius: 8px;
+}
+
+.container-inputs input{
+    width: 350px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.container-inputs select{
+    width: 350px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.botones{
+    display: flex;
+}
+
+.botones button{
+    margin: 20px 10px;
+    width: 165px;
+}
+
+h3{
+    color: rgb(0, 107, 0);
+    margin-block-end: 30px;
+    border-block-end: 1px solid rgb(0, 107, 0);
+}
