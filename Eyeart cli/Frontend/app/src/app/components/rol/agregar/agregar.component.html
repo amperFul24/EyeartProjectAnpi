@@ -1,0 +1,15 @@
+
+<div class="container-form">
+    <div class="formulario">
+        <div class="container-inputs">
+            <h3>AGREGAR ROL</h3>
+                <p>
+                    Descripcion Rol: <br><input type="text" [(ngModel)]="rol.Descripcion" class="form-control" aria-label="default input example"/>
+                </p>
+            <div class="botones">
+            <p><button type="button" class="btn btn-success"(click)="alta()">Agregar</button></p>
+            <p><button type="button" class="btn btn-danger" routerLink="/rol">Cancelar</button></p>
+            </div>    
+        </div>
+    </div>
+</div>

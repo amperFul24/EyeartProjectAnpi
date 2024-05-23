@@ -1,0 +1,15 @@
+<div class="container-form">
+    <div class="formulario">
+        <div class="container-inputs">
+            <h3>AGREGAR TIPO DE DOCUMENTO</h3>
+                <p>
+                    Tipo de Documento: <br><input type="text" [(ngModel)]="tipo.Descripcion" class="form-control" aria-label="default input example"/>
+                </p>
+                <p>
+            <div class="botones">
+            <p><button type="button" class="btn btn-success"(click)="alta()">Agregar</button></p>
+            <p><button type="button" class="btn btn-danger" routerLink="/tipodocumento">Cancelar</button></p>
+            </div>
+        </div>
+    </div>
+</div>

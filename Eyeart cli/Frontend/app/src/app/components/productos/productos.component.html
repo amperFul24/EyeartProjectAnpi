@@ -1,0 +1,49 @@
+<div class="contenedor">
+    <a routerLink="/producto/agregar">
+    <button type="button" class="btn btn-primary btn-lg">AGREGAR PRODUCTO</button>
+  </a>
+  <a routerLink="/categoria">
+    <button type="button" class="btn btn-primary btn-lg">INVENTARIO CATEGORIA</button>
+  </a>
+  
+    <div class="container-agregar">
+    </div>
+    <div class="container-table">
+    <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th scope="col">idProducto</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">DescripcionProducto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Foto</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+                @for(product of producto; track $index){
+                <tr>
+                  <td scope="row">{{product.idProducto}}</td>
+                  <td>{{product.Nombre}}</td>
+                  <td>{{product.DescripcionProducto}}</td>
+                  <td>{{product.Precio | currency }}</td>
+                  <td>{{product.Stock}}</td>
+                  <td>{{product.Descripcion}}</td>
+                  <td>{{product.url_foto}}</td>
+            <td><button class="btn btn-danger" (click)="baja(product.idProducto)">Borrar</button></td>
+            <td><a routerLink="/producto/editar/{{product.idProducto}}">
+              <button (click)="seleccionar(product.idProducto)" class="btn btn-info" >editar</button>
+            </a>
+            </td>
+          </tr>
+        }
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
+  
+  

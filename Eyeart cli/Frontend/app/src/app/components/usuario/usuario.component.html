@@ -1,0 +1,48 @@
+<div class="contenedor">
+  <a routerLink="/usuario/agregar">
+  <button type="button" class="btn btn-primary btn-lg">Agregar</button>
+</a>
+  <div class="container-agregar">
+  </div>
+  <div class="container-table">
+  <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">idUsuario</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Numero de Documento</th>
+          <th scope="col">Direccion</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Tipo de Documento</th>
+          <th scope="col">Ciudad</th>
+          <th scope="col">Contraseña</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+      @for(user of usuario;track user.idUsuario) {
+        <tr>
+          <td>{{user.idUsuario}}</td>
+          <td>{{user.Nombre}}</td>
+          <td>{{user.Apellido}}</td>
+          <td>{{user.NumeroDocumento}}</td>
+          <td>{{user.Direccion}}</td>
+          <td>{{user.Telefono}}</td>
+          <td>{{user.Documento}}</td>
+          <td>{{user.Ciudad}}</td>
+          <td>{{user.Contrasena}}</td>
+          <td><button class="btn btn-danger" (click)="baja(user.idUsuario)">Borrar</button></td>
+          <td><a routerLink="/usuario/editar/{{user.idUsuario}}">
+            <button (click)="seleccionar(user.idUsuario)" class="btn btn-info" >editar</button>
+          </a>
+          </td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+

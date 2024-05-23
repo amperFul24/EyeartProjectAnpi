@@ -1,0 +1,39 @@
+<div class="contenedor">
+  <a routerLink="/pedido/agregar">
+  <button type="button" class="btn btn-primary btn-lg">Agregar</button>
+</a>
+  <div class="container-agregar">
+  </div>
+  <div class="container-table">
+  <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">idPedido</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Codigo Referencia</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Total</th>
+          <th scope="col">Metodo de Pago</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+      @for(ped of pedido;track ped.idPedido) {
+        <tr>
+          <td>{{ped.idPedido}}</td>
+          <td>{{ped.Fecha}}</td>
+          <td>{{ped.CodigoReferencia}}</td>
+          <td>{{ped.Cantidad}}</td>
+          <td>{{ped.Total}}</td>
+          <td>{{ped.Descripcion}}</td>
+          <td><button class="btn btn-danger" (click)="baja(ped.idPedido)">Borrar</button></td>
+          <td><a routerLink="/pedido/editar/{{ped.idPedido}}">
+            <button (click)="seleccionar(ped.idPedido)" class="btn btn-info" >editar</button>
+          </a>
+          </td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+</div>
